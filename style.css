@@ -1,0 +1,159 @@
+/* --- :root - Paleta de Cores e Identidade --- */
+:root {
+    /* Cores Neutras de Base */
+    --cor-fundo: #f9f9f9;             /* Cinza bem claro (fundo da página) */
+    --cor-container: #ffffff;        /* Branco (fundo do conteúdo principal) */
+    --cor-texto-principal: #333333;   /* Cinza escuro (títulos) */
+    --cor-texto-secundario: #666666;  /* Cinza (parágrafos) */
+    --cor-borda: #eeeeee;             /* Cinza claro (divisões) */
+    
+    /* Cor de Destaque (Baseada no Header #81a3a3e9) */
+    --cor-destaque-clara: #A3C9C9;    /* Tom pastel claro (para fundos de hover) */
+    --cor-destaque-escura: #5F8484;   /* Tom mais escuro (para texto e bordas) */
+    --cor-header: #d4e5db ;           /* Tom claro usando na header */
+}
+
+/* --- Reset Básico e Estilos Globais --- */
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+}
+
+/* --- Layout do Container (Limita a largura e Centraliza) --- */
+.container {
+    max-width: 1000px; /* Aumentado levemente para melhor leitura */
+    margin: 0px; 
+    padding: 0 20px;
+}
+
+/* --- Estilo da Barra Superior (HEADER) --- */
+header {
+    background-color: var(--cor-header); /* Fundo branco ou neutro */
+    padding: 15px 0;
+    border-bottom: 2px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+/* Layout Flexbox para o conteúdo do Header */
+header .container {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center; 
+}
+
+/* --- 1. Estilo do Logo e Navegação de Acesso --- */
+/* Agrupa Logo e Navegação para o canto esquerdo */
+.header-left {
+    display: flex;
+    align-items: center; 
+    gap: 1100px; /* Espaço entre a Logo e o Menu */
+}
+
+.logo {
+    height: 80px; /* Altura ajustada */
+    width: auto;
+    flex-shrink: 0;
+}
+
+/* Estilo da Navegação (Cadastro/Login) */
+header nav {
+    /* Alinhamento dos links */
+    display: flex;
+    gap: 15px; /* Espaço entre os links */
+}
+
+header nav a {
+    text-decoration: none;
+    color: black; /* Cor de destaque para o texto */
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid #031818; 
+    transition: all 0.2s ease-in-out;
+}
+
+header nav a:hover {
+    background-color: #f9f9f9; /* Fundo suave no hover */
+    color: #f9f9f9; 
+    border-color: #031818;
+}
+
+/* --- 2. Estilo do Conteúdo Principal (MAIN) --- */
+main .container {
+    padding: 30px;
+    margin: 30px auto;
+    background-color: var(--cor-container);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px; /* Borda arredondada para visual moderno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+/* --- 3. Estilo das Seções de Conteúdo --- */
+main section {
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+/* Linha divisória entre as seções, exceto a primeira */
+main section + section {
+    border-top: 1px dashed var(--cor-borda); /* Linha tracejada suave */
+    padding-top: 25px;
+}
+
+/* --- 4. Estilos de Tipografia (Textos) --- */
+h1 {
+    color: var(--cor-destaque-escura); /* Título principal com cor de destaque */
+    font-size: 2.2em;
+    border-bottom: 3px solid var(--cor-destaque-clara);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+h2, h3, h4 {
+    color: var(--cor-texto-principal);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: var(--cor-destaque-escura); /* Destaque para as técnicas */
+}
+
+p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- 5. Estilos das Listas e Dicas --- */
+ul {
+    padding-left: 25px;
+}
+
+ul li {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Estiliza as técnicas de alívio (Lista de Dicas) */
+section h3 + ul li {
+    list-style: none; 
+    margin-left: -25px; 
+    padding-left: 10px;
+    border-left: 3px solid var(--cor-destaque-clara); /* Indicador visual */
+    font-size: 1.05em;
+}
+
+section h3 + ul li strong {
+    color: var(--cor-destaque-escura);
+}
