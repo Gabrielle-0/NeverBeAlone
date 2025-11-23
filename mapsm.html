@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual do Mapa de Pesquisa</title>
+    <link rel="stylesheet" href="mapsm.css"> 
+</head>
+<body>
+
+
+<header>
+    <div class="container"> 
+        <div class="header-left"> 
+            <img class="logo" src="Logo NVBA.png" alt="Logo Never Be Alone">
+    </div>
+</header>
+
+
+    <h1><main>Mapa Saúde Mental</main></h1>
+    
+    <form id="filtroForm">
+        <div class="filtros-grid">
+            <div class="coluna">
+                <label for="cep">Cep (8 dígitos)</label>
+                <input type="text" id="cep" placeholder="Digite o CEP (opcional)" maxlength="8" pattern="[0-9]{8}" inputmode="numeric">
+                <br>
+                <label for="estado">Estado</label>
+                <select id="estado" required>
+                    <option value="" disabled selected>Escolha o Estado</option>
+                    <option>Todos</option>
+                    <option>Acre</option>
+                    <option>Alagoas</option>
+                    <option>Amapá</option>
+                    <option>Amazonas</option>
+                    <option>Bahia</option>
+                    <option>Ceará</option>
+                    <option>Distrito Federal</option>
+                    <option>Espirito Santo</option>
+                    <option>Goiás</option>
+                    <option>Maranhão</option>
+                    <option>Mato Grosso</option>
+                    <option>Mato Grosso do Sul</option>
+                    <option>Minas Gerais</option>
+                    <option>Pará</option>
+                    <option>Paraíba</option>
+                    <option>Paraná</option>
+                    <option>Pernambuco</option>
+                    <option>Piauí</option>
+                    <option>Rio de Janeiro</option>
+                    <option>Rio Grande do Norte</option>
+                    <option>Rio Grande do Sul</option>
+                    <option>Rondônia</option>
+                    <option>Roraima</option>
+                    <option>Santa Catarina</option>
+                    <option>São Paulo</option>
+                    <option>Sergipe</option>
+                    <option>Tocantins</option>
+                </select>
+                <br>
+                <label for="cidade">Cidade</label>
+                <select id="cidade" required>
+                    <option value="" disabled selected>Escolha a cidade</option>
+                    <option>Abreu e Lima</option>
+                    <option>Afogados da Ingazeira</option>
+                    <option>Afrânio</option>
+                    <option>Agrestina</option>
+                    <option>Vitória de Santo Antão</option>
+                    <option>Xexéu</option>
+                </select>
+                <br>
+                <label for="formato">Formato</label>
+                <select id="formato" required>
+                    <option value="" disabled selected>Escolha o Formato</option>
+                    <option>Presencial</option>
+                    <option>Online</option>
+                </select>
+                <br>
+                <label for="pagamento">Pagamento</label>
+                <select id="pagamento" required>
+                    <option value="" disabled selected>Escolha a forma de pagamento</option>
+                    <option>Gratuito</option>
+                    <option>Pago</option>
+                </select>
+            </div>
+            <br>
+            <div class="coluna">
+                <h4>Tipo</h4>
+                <fieldset class="checkbox-group">
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Ambulatório saúde mental" checked> <label>Ambulatório saúde mental</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Atenção básica" checked> <label>Atenção básica</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="CAPS" checked> <label>CAPS</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Centro de Referência" checked> <label>Centro de Referência</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Hospital" checked> <label>Hospital</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Hospital Psiquiátrico" checked> <label>Hospital Psiquiátrico</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Terceiro setor" checked> <label>Terceiro setor</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="UPA" checked> <label>UPA</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Serviço escola" checked> <label>Serviço escola</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Centro de especialidades" checked> <label>Centro de especialidades</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Rede Socioassistencial" checked> <label>Rede Socioassistencial</label></div>
+                    <div class="checkbox-item"><input type="checkbox" name="tipo" value="Trabalhos voluntários" checked> <label>Trabalhos voluntários</label></div>
+                    <div class="checkbox-item todos">
+                        <input type="checkbox" id="todosCheckbox" name="tipo" value="Todos" checked> 
+                        <label>Todos</label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <button type="submit" class="botao-enviar">Enviar</button>
+    </form>
+    
+    <script src="mapsm.js"></script> 
+</body>
+</html>
